@@ -1,4 +1,6 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -14,11 +16,19 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          'style-loader',     // Injects styles into <head> in dev
-          'css-loader',       // Resolves @import and url()
-          'postcss-loader',   // Processes Tailwind and other PostCSS plugins
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
         ],
       },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'css/style.css',
+    }),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+    }),
+  ],
 };

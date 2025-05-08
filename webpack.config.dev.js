@@ -10,4 +10,5 @@ module.exports = merge(common, {
     open: true,
     static: ['./'],
   },
+
 });
