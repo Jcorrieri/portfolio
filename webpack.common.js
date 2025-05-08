@@ -9,4 +9,16 @@ module.exports = {
     clean: true,
     filename: './js/app.js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          'style-loader',     // Injects styles into <head> in dev
+          'css-loader',       // Resolves @import and url()
+          'postcss-loader',   // Processes Tailwind and other PostCSS plugins
+        ],
+      },
+    ],
+  },
 };
