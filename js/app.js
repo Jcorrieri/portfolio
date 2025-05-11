@@ -1,6 +1,8 @@
 import '../css/style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
   const toggleBtn = document.getElementById('theme-toggle');
   const root = document.documentElement;
 
@@ -11,8 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   toggleBtn?.addEventListener('click', () => {
     const isDark = root.classList.toggle('dark');
-    console.log("changing class, isDark: ", isDark)
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
+  menuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+    navMenu.classList.toggle('flex');
   });
 });
 

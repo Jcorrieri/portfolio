@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js scroll-smooth dark" lang="en">
+<html class="no-js scroll-smooth" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -15,14 +15,11 @@
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="Preview of Jacomo Corrieri's portfolio site">
 
-  <link rel="icon" href="/media/favicon.ico" sizes="any">
-  <link rel="icon" href="/media/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="/media/icon.png" sizes="any">
   <link rel="apple-touch-icon" href="./media/icon.png">
 
   <link rel="manifest" href="./site.webmanifest">
   <meta name="theme-color" content="#fafafa">
-
-  <script src="https://kit.fontawesome.com/b423f61fcd.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-white text-black dark:bg-gray-900 dark:text-white">
@@ -30,7 +27,17 @@
 <header class="bg-white shadow-md sticky top-0 z-50 dark:bg-gray-800 dark:shadow-lg">
   <div class="max-w-5xl mx-auto flex justify-between items-center p-6">
     <h1 class="text-3xl font-bold tracking-tight dark:text-white">Jacomo Corrieri</h1>
-    <nav class="space-x-6 text-base font-medium">
+
+    <!-- Hamburger toggle (mobile only) -->
+    <button id="menu-toggle" class="sm:hidden text-gray-800 dark:text-gray-200 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Nav links (hidden on mobile until toggled) -->
+    <nav id="nav-menu" class="hidden flex-col sm:flex items-center sm:flex-row gap-4 sm:gap-6 text-base font-medium absolute sm:static top-full left-0 w-full sm:w-auto bg-white dark:bg-gray-800 p-6 sm:p-0 shadow-md sm:shadow-none z-40">
       <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
       <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Education</a>
       <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Skills</a>
@@ -41,6 +48,7 @@
       </button>
     </nav>
   </div>
+
 </header>
 
 <main class="max-w-5xl mx-auto py-12 px-4">
@@ -48,17 +56,15 @@
     <h2 class="text-3xl font-semibold mb-4 dark:text-white">About Me</h2>
     <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
       I’m a software developer, researcher, and lifelong learner with a love for computing, math, and more! Throughout my studies, I’ve consistently sought out new challenges, from studying artificial intelligence in Seoul, South Korea to conducting undergraduate research in deep reinforcement learning. I’ve contributed to an award-winning travel planner, pursued rigorous coursework, and maintained a commitment to excellence across disciplines. I’m currently continuing my academic and technical development as a Master’s student in Computer Science at the University of Florida. Outside of computing,  I like to play the drums. I think I'm getting good, but I can handle criticism.</p>
+    <a
+      href="/media/Jcorrieri%20Resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:underline inline-flex items-center w-auto mt-8 text-base text-gray-900 dark:text-gray-200 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+    >
+      <img class="mr-2" src="https://img.icons8.com/officel/30/pdf.png" alt="pdf"/>View my Résumé
+    </a>
   </section>
-
-  <a
-    href="/media/Jcorrieri%20Resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="hover:underline flex items-center text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-  >
-    <span class="text-2xl mr-2">📄</span> View my Résumé
-  </a>
-
 
   <hr class="my-10 border-t border-gray-300 dark:border-gray-700">
 
@@ -88,39 +94,39 @@
 
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
       <div class="flex flex-col items-center bg-white border border-gray-400 dark:border-gray-700 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <i class="fab fa-python text-yellow-500 text-4xl mb-2"></i>
+        <img src="https://img.icons8.com/color/48/python--v1.png" alt="python--v1"/>
         <span class="text-lg font-medium text-gray-800 dark:text-gray-200">Python</span>
       </div>
       <div class="flex flex-col items-center bg-white border border-gray-400 dark:border-gray-700 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <i class="fab fa-java text-red-600 text-4xl mb-2"></i>
+        <img class="" src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>
         <span class="text-lg font-medium text-gray-800 dark:text-gray-200">Java</span>
       </div>
       <div class="flex flex-col items-center bg-white border border-gray-400 dark:border-gray-700 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <i class="fas fa-c text-blue-500 text-4xl mb-2"></i>
+        <img src="https://img.icons8.com/color/48/c-programming.png" alt="c-programming"/>
         <span class="text-lg font-medium text-gray-800 dark:text-gray-200">C Language</span>
       </div>
       <div class="flex flex-col items-center bg-white border border-gray-400 dark:border-gray-700 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <i class="fab fa-html5 text-orange-600 text-4xl mb-2"></i>
+        <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/>
         <span class="text-lg font-medium text-gray-800 dark:text-gray-200">HTML</span>
       </div>
       <div class="flex flex-col items-center bg-white border border-gray-400 dark:border-gray-700 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <i class="fab fa-css3-alt text-blue-600 text-4xl mb-2"></i>
+        <img src="https://img.icons8.com/color/48/css3.png" alt="css3"/>
         <span class="text-lg font-medium text-gray-800 dark:text-gray-200">CSS</span>
       </div>
       <div class="flex flex-col items-center bg-white border border-gray-400 dark:border-gray-700 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <i class="fas fa-brain text-pink-500 text-4xl mb-2"></i>
+        <img src="https://img.icons8.com/fluency/48/pytorch.png" alt="pytorch"/>
         <span class="text-lg font-medium text-gray-800 dark:text-gray-200">PyTorch</span>
       </div>
       <div class="flex flex-col items-center bg-white border border-gray-400 dark:border-gray-700 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <i class="fas fa-microchip text-indigo-500 text-4xl mb-2"></i>
+        <img src="https://img.icons8.com/color/48/assembly.png" alt="assembly"/>
         <span class="text-lg font-medium text-gray-800 dark:text-gray-200">Assembly</span>
       </div>
       <div class="flex flex-col items-center bg-white border border-gray-400 dark:border-gray-700 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <i class="fa-solid fa-terminal text-black dark:text-white text-4xl mb-2"></i>
+        <img src="https://img.icons8.com/fluency/48/linux-terminal.png" alt="console"/>
         <span class="text-lg font-medium text-gray-800 dark:text-gray-200">Unix</span>
       </div>
       <div class="flex flex-col items-center bg-white border border-gray-400 dark:border-gray-700 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <i class="fab fa-git-alt text-red-500 text-4xl mb-2"></i>
+        <img src="https://img.icons8.com/color/48/git.png" alt="git"/>
         <span class="text-lg font-medium text-gray-800 dark:text-gray-200">Git</span>
       </div>
     </div>
@@ -138,7 +144,7 @@
               controls
               class="w-full h-full rounded-md object-cover"
             >
-            <source src="/media/MRCC_4A_SD89.mp4" type="video/mp4" />
+            <source src="https://www.dropbox.com/scl/fi/vzkqopndb4neu2392cpr3/MRCC_4A_SD89.mp4?rlkey=mvivhnxejpxzu52uxqgqlukkp&st=h7kaszmh&raw=1" type="video/mp4" />
             Your browser does not support the video tag.
             </video>
           </div>
@@ -184,7 +190,7 @@
               controls
               class="w-full h-full rounded-md object-cover"
             >
-              <source src="/media/Aeroatlas_Demo.mp4" type="video/mp4" />
+              <source src="https://www.dropbox.com/scl/fi/smkioq5hdl927ter4qn8b/Aeroatlas_Demo.mp4?rlkey=tze88ae9d0eedlyuruwpsdg1v&st=yjq36k6j&raw=1" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -205,7 +211,7 @@
         </div>
 
         <h3 class="text-2xl font-bold mb-2 dark:text-white">
-          Custom Travel Planner – Audience Choice Award Winner
+          Aeroatlas Travel Planner – Audience Choice Award Winner
         </h3>
 
         <p class="text-gray-700 dark:text-gray-300 mb-4">
@@ -218,13 +224,15 @@
       <div class="bg-white border-gray-400 p-6 rounded-lg shadow-sm border dark:bg-gray-800 dark:border-gray-700">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
 
-          <!-- Static Placeholder Image -->
+          <!-- Embedded Video -->
           <div class="w-full aspect-video mb-4">
-            <img
-              src="/media/gpiosc.jpg"
-            alt="Raspberry Pi Controller UI"
-            class="w-full h-full object-cover rounded-md"
-            />
+            <video
+              controls
+              class="w-full h-full rounded-md object-cover"
+            >
+              <source src="https://www.dropbox.com/scl/fi/em17fuyba6vgzr0x7o9jp/RPI_Demo.mp4?rlkey=popepwmui1jpf4lnm0qpsb4xl&st=95pdr1ch&raw=1" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <!-- Technologies Used -->
@@ -241,11 +249,11 @@
         </div>
 
         <h3 class="text-2xl font-bold mb-2 dark:text-white">
-          Raspberry Pi Controller – Custom Java Interface
+          Raspberry Pi Interface
         </h3>
 
         <p class="text-gray-700 dark:text-gray-300 mb-4">
-          This project implements a desktop interface in Java to control a Raspberry Pi system. It features a graphical UI to interact with the Pi’s components and monitor key system resources. Key modules include a file manager for uploading, downloading, renaming, and deleting files; a basic shell interface; and real-time CPU, RAM, and disk usage monitoring. The GPIO manager is currently read-only.
+          This project implements a desktop interface in Java to control a Raspberry Pi system. It features a graphical UI to interact with the Pi’s components and monitor key system resources. Key modules include a file manager for uploading, downloading, renaming, and deleting files; a basic shell interface; and real-time CPU, RAM, disk usage monitoring, and a GPIO control panel (currently read-only). The application makes use of JavaFX Tasks to handle multithreaded operations, ensuring background processes such as loading and data collection do not block program usage. Users can save their system preferences for greater convenience when re-launching the application.
         </p>
 
         <a
@@ -254,7 +262,18 @@
           rel="noopener noreferrer"
           class="inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md shadow hover:bg-gray-200 dark:hover:bg-gray-600 transition text-sm mt-2"
         >
-          <i class="fab fa-github mr-2"></i> View on GitHub
+          <img class="mr-2" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github"/> View on GitHub
+        </a>
+      </div>
+
+      <div class="flex justify-center">
+        <a
+          href="https://github.com/Jcorrieri?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:underline w-auto text-base text-gray-900 dark:text-gray-200 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        >
+          View All (+)
         </a>
       </div>
 
@@ -263,7 +282,7 @@
 
   <section id="contact" class="mt-20 scroll-mt-[20vh]">
     <h2 class="text-3xl font-semibold mb-6 dark:text-white">Contact</h2>
-    <form class="space-y-6 bg-white border border-gray-400 dark:border-gray-700 p-6 rounded-lg shadow-md dark:bg-gray-800">
+    <form action="https://formspree.io/f/mpwdldbl" method="POST"   class="space-y-6 bg-white border border-gray-400 dark:border-gray-700 p-6 rounded-lg shadow-md dark:bg-gray-800">
       <div>
         <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
         <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md dark:bg-gray-900 dark:border-gray-700 dark:text-white">
@@ -276,13 +295,13 @@
         <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
         <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"></textarea>
       </div>
-      <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Send Message</button>
+      <button type="submit" class="cursor-pointer px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Send Message</button>
     </form>
   </section>
 </main>
 
 <footer class="text-center py-6 mt-20 text-sm text-gray-500 dark:text-gray-400">
-  I built this website using Webpack and Tailwind CSS.
+  &copy 2025 Jacomo Corrieri - Built with Webpack and Tailwind CSS. Icons by <a class="underline" href="https://icons8.com/" target="_blank">Icons8</a>
 </footer>
 
 </body>
