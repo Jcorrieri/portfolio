@@ -16,9 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 
-  menuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('hidden');
-    navMenu.classList.toggle('flex');
-  });
-});
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+      navMenu.classList.toggle('flex');
+    });
 
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.add('hidden');
+        navMenu.classList.remove('flex');
+      });
+    });
+  }
+});
