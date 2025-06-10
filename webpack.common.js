@@ -25,10 +25,15 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/style.css',
+      filename: 'css/[name].css',
     }),
     new HtmlWebpackPlugin({
       template: './index.html',
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './blog.html',
+      filename: 'blog.html',
     }),
   ],
 };

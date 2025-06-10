@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jacomo Corrieri - Portfolio</title>
 
-  <link rel="stylesheet" href="./css/style.css">
   <meta name="description" content="Developer Portfolio of Jacomo Corrieri, an aspiring software engineer and AI researcher.">
 
   <meta property="og:title" content="Jacomo Corrieri - Portfolio">
@@ -20,6 +19,12 @@
 
   <link rel="manifest" href="./site.webmanifest">
   <meta name="theme-color" content="#fafafa">
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
 </head>
 
 <body class="bg-white text-black dark:bg-gray-900 dark:text-white">
@@ -63,6 +68,15 @@
       class="hover:underline inline-flex items-center w-auto mt-8 text-base text-gray-900 dark:text-gray-200 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
     >
       <img class="mr-2" src="https://img.icons8.com/officel/30/pdf.png" alt="pdf"/>View my Résumé
+    </a>
+
+    <a
+      href="./blog.html"
+      target="_self"
+      rel="noopener noreferrer"
+      class="hover:underline inline-flex items-center w-auto mt-8 text-base text-gray-900 dark:text-gray-200 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+    >
+      Blog
     </a>
   </section>
 
@@ -191,6 +205,7 @@
               controls
               class="w-full h-full rounded-md object-cover"
               poster="./media/aeroatlas.jpg"
+              preload="none"
             >
               <source src="https://www.dropbox.com/scl/fi/smkioq5hdl927ter4qn8b/Aeroatlas_Demo.mp4?rlkey=tze88ae9d0eedlyuruwpsdg1v&st=yjq36k6j&raw=1" type="video/mp4" />
               Your browser does not support the video tag.
@@ -232,6 +247,7 @@
               controls
               class="w-full h-full rounded-md object-cover"
               poster="./media/gpiosc.jpg"
+              preload="none"
             >
               <source src="https://www.dropbox.com/scl/fi/em17fuyba6vgzr0x7o9jp/RPI_Demo.mp4?rlkey=popepwmui1jpf4lnm0qpsb4xl&st=95pdr1ch&raw=1" type="video/mp4" />
               Your browser does not support the video tag.
@@ -285,7 +301,7 @@
 
   <section id="contact" class="mt-20 scroll-mt-[20vh]">
     <h2 class="text-3xl font-semibold mb-6 dark:text-white">Contact</h2>
-    <form action="https://formspree.io/f/mpwdldbl" method="POST"   class="space-y-6 bg-white border border-gray-400 dark:border-gray-700 p-6 rounded-lg shadow-md dark:bg-gray-800">
+    <form action="https://formspree.io/f/mpwdldbl" method="POST" class="space-y-6 bg-white border border-gray-400 dark:border-gray-700 p-6 rounded-lg shadow-md dark:bg-gray-800">
       <div>
         <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
         <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md dark:bg-gray-900 dark:border-gray-700 dark:text-white">
