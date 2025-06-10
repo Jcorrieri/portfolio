@@ -1,8 +1,6 @@
 import '../css/style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('loaded');
-
   const menuBtn = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
   const toggleBtn = document.getElementById('theme-toggle');
