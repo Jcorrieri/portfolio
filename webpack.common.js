@@ -1,12 +1,22 @@
 const path = require('path');
+const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const articlesDir = path.resolve(__dirname, 'articles');
+const htmlFiles = fs.readdirSync(articlesDir).filter(file => file.endsWith('.html'));
+
+const htmlPlugins = htmlFiles.map(filename => {
+  return new HtmlWebpackPlugin({
+    template: `./articles/${filename}`,
+    filename: `./articles/${filename}`,
+  });
+});
 
 module.exports = {
   entry: {
     app: './js/app.js',
     study: './js/study.js',
-    article: './js/article.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -39,10 +49,6 @@ module.exports = {
       filename: 'study.html',
       chunks: ['app', 'study'],
     }),
-    new HtmlWebpackPlugin({
-      template: './template.html',
-      filename: 'template.html',
-      chunks: ['app', 'article'],
-    }),
+    ...htmlPlugins,
   ],
 };

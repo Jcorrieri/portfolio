@@ -4,6 +4,8 @@
 node_modules
 .idea
 .editorconfig
+articles/markdown
+local-scripts
 
 # Logs
 logs

@@ -33,6 +33,8 @@
   "dependencies": {
     "dompurify": "^3.2.6",
     "github-markdown-css": "^5.8.1",
-    "marked": "^15.0.12"
+    "jsdom": "^26.1.0",
+    "marked": "^15.0.12",
+    "mathjax": "^3.2.2"
   }
 }
