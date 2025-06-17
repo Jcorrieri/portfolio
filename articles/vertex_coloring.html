@@ -70,18 +70,46 @@ scheduling and routing problems, resource allocation, computer networking, and m
 <p>A proper coloring (or, more simply, a <strong>coloring</strong>) of a graph
 G, is an assignment of colors (elements of some set) to the vertices of G,
 one color to each vertex, such that adjacent vertices are colored differently.
-A coloring using k-colors is called a <strong><em>k</em>-coloring</strong>.</p>
-<img class="m-auto hidden dark:block" src="../media/article_images/vertex-coloring/graph_dark.svg" width="483" alt="graph">
-<img class="m-auto dark:hidden" src="../media/article_images/vertex-coloring/graph.svg" width="483" alt="graph">
+A coloring using k-colors is called a <strong>k-coloring</strong>. As seen below, the colors
+used to color a graph can be denoted both numerically (1, 2, ... , k) and visually
+(e.g. red, green, blue). </p>
+<img class="m-auto hidden dark:block" src="../media/article_images/vertex-coloring/graph_dark.svg" width="500" alt="graph">
+<img class="m-auto dark:hidden" src="../media/article_images/vertex-coloring/graph.svg" width="500" alt="graph">
 <p class="text-center m-auto italic">Figure 1. A 3-coloring of two graphs</p>
 
 <h2>Minimum Colorings</h2>
-<p>The <strong>chromatic number</strong> of a graph G is the minimum number of colors in any coloring of <em>G</em>, denoted by χ(G).
+<p>The <strong>chromatic number</strong> of a graph G is the minimum number of colors in any coloring of G, denoted by χ(G).
 Definition 3. A <strong>minimum coloring</strong> of a graph G is a k-coloring of G, such
-that χ(G) = k.</p>
-<img class="m-auto hidden dark:block" src="../media/article_images/vertex-coloring/minimal_coloring_dark.svg" width="300" alt="graph">
-<img class="m-auto dark:hidden" src="../media/article_images/vertex-coloring/minimal_coloring.svg" width="300" alt="graph">
+that χ(G) = k. </p>
+<img class="m-auto hidden dark:block" src="../media/article_images/vertex-coloring/minimal_coloring_dark.svg" width="235" alt="graph">
+<img class="m-auto dark:hidden" src="../media/article_images/vertex-coloring/minimal_coloring.svg" width="235" alt="graph">
 <p class="text-center m-auto italic">Figure 2. A minimum coloring of a bipartite graph</p>
+
+<h2>Bounding the Chromatic Number</h2>
+<p><em>For every graph G,</em>     </p>
+<p>χ(G) ≤ ∆(G) + 1.</p>
+<p>Where ∆(G) is the <strong>maximum degree</strong> of the graph, or the largest number of neighbors of any vertex. For any
+connected graph that is not an odd cycle or a complete graph, however, the upper bound reduces to</p>
+<p>χ(G) ≤ ∆(G).</p>
+<p>This relationship is known as Brooks' theorem.</p>
+<img class="m-auto hidden dark:block" src="../media/article_images/vertex-coloring/max_deg_dark.svg" width="260" alt="graph">
+<img class="m-auto dark:hidden" src="../media/article_images/vertex-coloring/max_deg.svg" width="260" alt="graph">
+<p class="text-center m-auto italic">Figure 3. A vertex with the maximum color</p>
+
+<h2>Determining the Chromatic Number</h2>
+<p>Determining the chromatic number of a graph is extremely challenging and is known as an <strong>NP-Complete</strong> problem.
+Algorithms exist for coloring graphs, but they are not guaranteed to use the minimum number of colors.</p>
+<h3>Greedy Algorithm Psueocode</h3>
+<pre><code>for each v in V(G) do
+    neighborColors = { color(u) : u in N(v) }
+    c = 1
+    while c in neighborColors do
+        c = c + 1
+    end while
+    color(v) = c
+end for
+</code></pre>
+
         </article>
     </main>
 
