@@ -4,6 +4,7 @@
 node_modules
 .idea
 .editorconfig
+*.drawio
 articles/markdown
 local-scripts
 
