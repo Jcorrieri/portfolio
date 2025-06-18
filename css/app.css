@@ -726,9 +726,6 @@
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
-  .h-fit {
-    height: fit-content;
-  }
   .h-full {
     height: 100%;
   }
